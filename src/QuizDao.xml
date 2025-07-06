@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kk.dao.QuizDao">
+
+    <resultMap id="questionMap" type="com.kk.entity.Question">
+        <id property="id" column="id"/>
+        <result property="question" column="question"/>
+        <collection property="options" ofType="com.kk.entity.Option">
+            <id property="id" column="option_id"/>
+            <result property="questionId" column="question_id"/>
+            <result property="optionText" column="option_text"/>
+            <result property="score" column="score"/>
+        </collection>
+    </resultMap>
+
+    <select id="getAllQuestionsWithOptions" resultMap="questionMap">
+        SELECT
+            q.id,
+            q.question,
+            o.id AS option_id,
+            o.question_id,
+            o.option_text,
+            o.score
+        FROM questions q
+        LEFT JOIN options o ON q.id = o.question_id
+        ORDER BY q.id, o.id
+    </select>
+	<select id="getResultByScore" parameterType="map" resultType="java.lang.String">
+    SELECT result_text 
+    FROM results
+    WHERE #{score} BETWEEN min_score AND max_score
+</select>
+
+	
+</mapper>

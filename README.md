@@ -4,51 +4,51 @@
 
 登录页：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps1.jpg) 
+![img](pictures/wps1.jpg) 
 
 用户名密码不匹配：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps2.jpg) 
+![img](pictures/wps2.jpg) 
 
 注册页：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps3.jpg) 
+![img](pictures/wps3.jpg) 
 
 进去后，主页整合了上课讲过的三个小功能。
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps4.jpg) 
+![img](pictures/wps4.jpg) 
 
 第一个，乘法答题
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps5.jpg) 
+![img](pictures/wps5.jpg) 
 
 随机生成个位数乘法题，一共有四题，全部答完显示：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps6.jpg) 
+![img](pictures/wps6.jpg) 
 
 接下来，返回主页，心理测试：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps7.jpg) 
+![img](pictures/wps7.jpg) 
 
 数据库内目前只存了三题，后续可以完善。
 
 测试结果如下：不同情况如下
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps8.jpg) 
+![img](pictures/wps8.jpg) 
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps9.jpg) 
+![img](pictures/wps9.jpg) 
 
 第三个功能，猜数字游戏
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps10.jpg) 
+![img](pictures/wps10.jpg) 
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps11.jpg) 
+![img](pictures/wps11.jpg) 
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps12.jpg) 
+![img](pictures/wps12.jpg) 
 
 然后是退出登录页：（并非注销）
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps13.jpg) 
+![img](pictures/wps13.jpg) 
 
 3秒后跳转登录页。
 
@@ -75,7 +75,7 @@
 | options   | 测试选项表     | id, question_id, option_text, score          |
 | results   | 测试结果表     | id, score_range_min, score_range_max, result |
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps14.jpg) 
+![img](pictures/wps14.jpg) 
 
 #### 3.包与类结构
 
@@ -91,7 +91,7 @@ Question：题目实体，包含题干及选项集合（List<Option>）。
 
 Option：选项实体，含选项文本与分值。
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps15.jpg) 
+![img](pictures/wps15.jpg) 
 
 User.java:
 
@@ -459,7 +459,7 @@ public class MyBatisUtil {
 
 （4）com.kk.controller包：
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps16.jpg) 
+![img](pictures/wps16.jpg) 
 
 UserController.java:
 
@@ -633,7 +633,7 @@ public class UserController extends HttpServlet {
 
 （5）com.kk.dao包
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps17.jpg) 
+![img](pictures/wps17.jpg) 
 
 QuizDao.java:
 
@@ -695,7 +695,7 @@ public interface UserDao {
 
 （6）com.kk.exception包
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps18.jpg) 
+![img](pictures/wps18.jpg) 
 
 package com.kk.exception;
 
@@ -717,7 +717,7 @@ public class UserException extends Exception {
 
 （7）com.kk.service包
 
-![img](file:///C:\Users\XZS\AppData\Local\Temp\ksohtml14672\wps19.jpg) 
+![img](pictures/wps19.jpg) 
 
 package com.kk.service;
 
